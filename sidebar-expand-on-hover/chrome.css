@@ -22,7 +22,7 @@
                 overflow: visible !important;
 
                 #zen-appcontent-navbar-container:has(#nav-bar > .titlebar-buttonbox-container:last-child) {
-                    margin-left: calc(0px - var(--zen-toolbox-max-width)) !important;
+                    /* margin-left: calc(0px - var(--zen-toolbox-max-width)) !important; */
 
                     #nav-bar-customization-target>toolbarbutton:first-child {
                         padding-inline-start: var(--toolbarbutton-outer-padding) !important;
@@ -106,15 +106,10 @@
                 display: none !important;
             }
 
-            &[pinned]:not([zen-essential]):hover .tab-reset-button,
-            &[pinned][visuallyselected]:not([zen-essential]) .tab-reset-button {
-                display: block !important;
-            }
-
             /* Regular tab handling */
             &:not([pinned]):hover .tab-close-button,
             &[visuallyselected]:not([pinned]) .tab-close-button {
-                display: block !important;
+                display: none !important;
             }
 
             /* Essential tab styling */
@@ -427,8 +422,8 @@
             toolbarbutton {
                 margin: 0 !important;
                 flex-grow: 1 !important;
-                transition: flex-grow var(--theme-sidebar_expand_on_hover-transition_speed), 
-                    width var(--theme-sidebar_expand_on_hover-transition_speed), 
+                transition: flex-grow var(--theme-sidebar_expand_on_hover-transition_speed),
+                    width var(--theme-sidebar_expand_on_hover-transition_speed),
                     margin-inline var(--theme-sidebar_expand_on_hover-transition_speed) !important;
                 transition-delay: var(--theme-sidebar_expand_on_hover-time_delay) !important;
                 margin-inline: 2px !important;
